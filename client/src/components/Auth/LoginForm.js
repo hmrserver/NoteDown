@@ -73,7 +73,7 @@ function LoginForm() {
           />
           <div className="formFooter">
             <a className="underlineHover" href="#">
-              Forgot Password??
+              Forgot Password?
             </a>
             <a
               href="#"
