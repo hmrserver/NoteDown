@@ -24,7 +24,7 @@ jobs:
           git clone https://github.com/${{ github.repository }}.git ${{ github.event.repository.name }}
           rsync -a --exclude='.git' --exclude='Dockerfile' --exclude='docker-compose.yml' ${{ github.event.repository.name }}/ ${{ secrets.VPS_PROJECT_PATH }}
           cd ${{ secrets.VPS_PROJECT_PATH }}
-          docker-compose down
-          docker-compose up -d --build
+          docker compose down
+          docker compose up -d --build
           cd /home/${{ secrets.VPS_USERNAME }}/tmp
           rm -rf ${{ github.event.repository.name }}
